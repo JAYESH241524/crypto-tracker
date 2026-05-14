@@ -1,0 +1,183 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  color: aliceblue;
+  box-sizing: border-box;
+
+}
+#root{
+}
+.topcontainer{
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+
+}
+.imgContainer{
+  width: 40%;
+  flex:1;
+}
+
+.loading{
+  background-color: black;
+  /* height: 100vh; */
+  flex:2;
+}
+
+.coinTable{
+  width: 90vw;
+  display: flex;
+  border: 1px solid white;
+  flex-direction: column;
+  
+}
+
+.row_header{
+  font-size: 2.5rem;
+  display: flex;
+  width: 100%;
+  background-color: rgb(64, 9, 242);
+
+}
+.row{
+  font-size: 1rem;
+  display: flex;
+  width: 100%;
+
+}
+
+.cell{
+  flex: 1;
+  padding: 10px;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  overflow:scroll;
+  
+}
+.cell::-webkit-scrollbar{
+  display: none;
+}
+
+.coinDetails{
+    display: flex;
+    align-items: center;
+     
+    
+}
+.image{
+  width: 40%;
+}
+.image>img{
+  width: 70%;
+  min-width: 20px;;
+  /* border:1px solid wheat; */
+}
+.names{
+  display: flex;
+  flex-direction: column;
+  /* border:1px solid wheat; */
+
+}
+.name{
+  font-size: 2rem;
+}
+.sym{
+  font-size: 1.5rem;
+}
+.curr{
+  font-size: 1.5rem;
+}
+.pages{
+  margin:20px;
+  width: 90%;
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-between;
+}
+.pages button{
+  width: 50px;
+  height: 30px;
+  background-color: rgb(61, 60, 60);
+
+}
+@media (max-width: 768px) {
+
+  .row_header {
+    font-size: 1rem;
+  }
+
+  .row {
+    font-size: 0.8rem;
+  }
+
+  .cell {
+    padding: 5px;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .sym {
+    font-size: 0.8rem;
+  }
+
+  .curr {
+    font-size: 0.9rem;
+  }
+
+  .coinDetails {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .image {
+    width: 60%;
+  }
+
+  .pages {
+    font-size: 1rem;
+  }
+
+  .pages button {
+    width: 70px;
+    height: 35px;
+  }
+}
+.currContainer{
+  display: flex;
+  justify-content: flex-start;
+  border: 10px solide rgb(255, 255, 255);
+  font-size: 1.5rem;
+  width: 90%;
+  padding: 1.5rem;
+  
+  
+  /* background-color: aqua; */
+}
+.currcode{
+  margin-left: 0.5rem;
+  width: 80px;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(48, 48, 48);
+}
+
+.currcode::-webkit-scrollbar{
+  display: none;
+}
+
+.loss{
+  color: rgb(227, 52, 52)
+}
+.profit{
+  color: rgb(90, 244, 90);
+}

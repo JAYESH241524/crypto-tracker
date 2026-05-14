@@ -1,0 +1,1 @@
+export const coin_api="CG-4xciY8et49h6RphxMYtD5Qi8";
