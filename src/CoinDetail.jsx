@@ -30,7 +30,7 @@ export default function CoinData(){
                 <img src={data.image.large}/>
             </div>
             <div className="coinName" >{data.name}</div>
-            <div className="currentPrice" >{data.market_data.current_price[cur]}</div>
+            <div className="currentPrice" >{data.market_data.current_price[cur].toLocaleString()}</div>
             <div className="description">{data.description.en}</div>
         </div>
     )
