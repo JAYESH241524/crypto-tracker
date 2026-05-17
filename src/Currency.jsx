@@ -1,5 +1,5 @@
 
-export default function Currrency({cur,setCur}){
+export default function Currrency({cur,setCur,className}){
     const currencyCodes = [
   "usd",
   "inr",
@@ -42,7 +42,7 @@ export default function Currrency({cur,setCur}){
   "ils"
 ];
 return(
-    <div className="currContainer">
+    <div className={className}>
         <label>Currency :</label>
         <select name="currency" className="currcode" value={cur} onChange={(e)=>setCur(e.target.value)}>
             {currencyCodes.map((code)=><option key={code} value={code}>{code}</option>)}

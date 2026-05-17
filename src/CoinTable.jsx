@@ -3,11 +3,15 @@ import { fetchCoinDetails } from "./api/fetchCoinDetails";
 import { useQuery } from "@tanstack/react-query";
 import Currency from "./Currency";
 import { FaForward, FaBackward } from "react-icons/fa";
-
+import { useContext } from "react";
+import UserContext from "./api/fetchContext";
+import { useNavigate } from "react-router-dom";
 
 export default function CoinTable(){
+    const {setId}=useContext(UserContext);
     const [cur,setCur]=useState("usd");
     const [page,setPage]=useState(1);
+    const navigate=useNavigate();
     const {data,isLoading,isError,error}=useQuery({queryKey:['user',page,cur],
         queryFn:()=>fetchCoinDetails(page,cur),
         gcTime:1000*60*10,
@@ -22,7 +26,7 @@ export default function CoinTable(){
     console.log(data);
     return(
         <>
-        <Currency cur={cur} setCur={setCur}/>
+        <Currency  cur={cur} setCur={setCur}className={"currContainer"}/>
         <div className="coinTable">
 
             <div className="row_header">
@@ -44,7 +48,7 @@ export default function CoinTable(){
 
             </div>
             {data.map((coin)=>(
-                <div key={coin.id} className="row">
+                <div key={coin.id} onClick={()=>{setId(coin.id);navigate("/details");}} className="row">
                     <div className="cell">
                         <div className="coinDetails">
 
